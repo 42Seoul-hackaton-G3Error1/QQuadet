@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">QQuadet</string>
+    <string name="iWillBuy">사올래!</string>
+    <string name="iWillEat">먹을래?</string>
+    <string name="mainLogo">MainLogo</string>
     <string name="arriveTime">도착시간</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
