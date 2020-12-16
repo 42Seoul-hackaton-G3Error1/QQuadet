@@ -69,7 +69,7 @@
             >
 
             <TextView
-                android:id="@+id/arrival_minute"
+                android:id="@+id/arriveAM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -81,7 +81,7 @@
                 />
 
             <TextView
-                android:id="@+id/arrival_minute"
+                android:id="@+id/arrivePM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -102,7 +102,6 @@
         >
 
         <TextView
-            android:id="@+id/arrival_minute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -113,7 +112,6 @@
             />
 
         <TextView
-            android:id="@+id/arrival_minute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -144,7 +142,7 @@
         >
 
         <TextView
-            android:id="@+id/arrival_hour"
+            android:id="@+id/end_hour"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -166,7 +164,7 @@
             />
 
         <TextView
-            android:id="@+id/arrival_minute"
+            android:id="@+id/end_minute"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -187,7 +185,7 @@
             >
 
             <TextView
-                android:id="@+id/arrival_minute"
+                android:id="@+id/endAM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -199,7 +197,7 @@
                 />
 
             <TextView
-                android:id="@+id/arrival_minute"
+                android:id="@+id/endPM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -209,7 +207,6 @@
                 android:text="@string/pm"
                 android:background="@drawable/custom_button1"
                 />
-
         </LinearLayout>
     </LinearLayout>
 
@@ -220,7 +217,6 @@
         >
 
         <TextView
-            android:id="@+id/arrival_minute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -231,7 +227,6 @@
             />
 
         <TextView
-            android:id="@+id/arrival_minute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -255,36 +250,54 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:layout_gravity="center"
+            android:id="@+id/btnFirstMinus"
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="47dp"
+            android:background="@drawable/up_down_btn"
             android:text="-"
-            android:textColor="#FFFFFF"/>
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
 
         <TextView
-            android:id="@+id/tvMain"
+            android:id="@+id/tvSecondText2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:textColor="#FFFFFF"/>
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:layout_gravity="center"
+            android:id="@+id/btnFirstPlus"
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/up_down_btn"
             android:text="+"
-            android:textColor="#FFFFFF"/>
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAssign2"
+        android:layout_width="300dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="55dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/up_down_btn"
+        android:text="신청"
+        android:textSize="35sp"
+        android:textColor="@color/white"/>
 
 </LinearLayout>
