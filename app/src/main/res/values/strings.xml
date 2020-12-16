@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">QQuadet</string>
-    <string name="arrive_time">도착시간</string>
+    <string name="arriveTime">도착시간</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="endTime">신청마감시간</string>
+    <string name="qquanum">꽈배기 갯수</string>
 </resources>
