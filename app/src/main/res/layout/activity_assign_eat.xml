@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AssignEatActivity">
+
+    <TextView
+        android:layout_width="119dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="113dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginEnd="121dp"
+        android:text="SUGAR"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="51dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFirstM"
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="47dp"
+            android:background="@drawable/up_down_btn"
+            android:text="-"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvFirstText"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnFirstP"
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/up_down_btn"
+            android:text="+"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="182dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="NO SUGAR"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSecondM"
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="47dp"
+            android:background="@drawable/up_down_btn"
+            android:text="-"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvSecondText"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnSecondP"
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/up_down_btn"
+            android:text="+"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAssign"
+        android:layout_width="300dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="139dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/up_down_btn"
+        android:text="신청"
+        android:textSize="35sp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
