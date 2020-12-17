@@ -1,5 +1,6 @@
 package miinjung.study.qquadet
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -53,8 +54,11 @@ class AssignEatActivity : AppCompatActivity() {
     }
 
     private fun clickAssign(){
+        val intent = Intent(this,MainActivity::class.java)
+        intent.putExtra("number1",num1)
+        intent.putExtra("number2",num2)
         findViewById<Button>(R.id.btnAssign).setOnClickListener() {
-            Toast.makeText(this,num1.toString()+","+num2.toShort(),Toast.LENGTH_SHORT).show()
+            startActivity(intent)
         }
     }
 }
