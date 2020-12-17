@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AssignEatActivity"></activity>
-        <activity android:name=".AssingnBuyActivity"></activity>
+        <activity android:name=".TimeListActivity"></activity>
+        <activity android:name=".AssignEatActivity" />
+        <activity android:name=".AssingnBuyActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
