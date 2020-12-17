@@ -39,4 +39,12 @@ class AssingnBuyActivity : AppCompatActivity() {
             Toast.makeText(this,num1.toString()+","+num2.toShort(), Toast.LENGTH_SHORT).show()
         }
     }
+
+    private fun clickArriveAm(){
+        findViewById<TextView>(R.id.arriveAM).setOnClickListener() {
+            findViewById<TextView>(R.id.arriveAM).back
+        }
+    }
+
+
 }
