@@ -10,37 +10,37 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="155dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="222dp"
+        android:layout_height="275dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/qquadet_logo"
-        android:contentDescription="@string/mainLogo"/>
+        android:layout_marginTop="80dp"
+        android:contentDescription="@string/mainLogo"
+        android:src="@drawable/qquadet_logo" />
 
     <TextView
         android:id="@+id/mainBuy"
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="90dp"
         android:gravity="center"
         android:layout_marginHorizontal="30dp"
         android:text="@string/iWillBuy"
         android:textSize="53sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/main_buy_btn"/>
 
     <TextView
         android:id="@+id/mainEat"
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="90dp"
         android:gravity="center"
         android:layout_marginHorizontal="30dp"
         android:text="@string/iWillEat"
         android:textSize="53sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/main_eat_btn"/>
 
 </LinearLayout>
