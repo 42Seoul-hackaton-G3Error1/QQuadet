@@ -1,7 +1,10 @@
 package miinjung.study.qquadet
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -16,7 +19,10 @@ class TimeListActivity : AppCompatActivity() {
 
     private fun initRecyclerView(){
         val recyclerView = findViewById<RecyclerView>(R.id.rvTimeList)
-        val adapter = TimeListAdapter()
+        val adapter = TimeListAdapter(this){SearchData ->
+            val intent = Intent(this, AssignEatActivity::class.java)
+            startActivity(intent)
+        }
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter.setItem(dataList1, dataList2)
