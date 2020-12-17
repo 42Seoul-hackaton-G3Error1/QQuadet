@@ -14,7 +14,7 @@
         android:layout_height="155dp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/logo"
+        android:src="@drawable/qquadet_logo"
         android:contentDescription="@string/mainLogo"/>
 
     <TextView
