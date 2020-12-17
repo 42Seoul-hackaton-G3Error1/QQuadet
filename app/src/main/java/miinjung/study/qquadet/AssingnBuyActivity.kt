@@ -4,14 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
-import android.view.KeyEvent
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_assingn_buy.*
+import android.widget.ToggleButton
+import kotlinx.android.synthetic.main.activity_assign_buy.*
 
 
 class AssingnBuyActivity : AppCompatActivity() {
@@ -20,15 +18,18 @@ class AssingnBuyActivity : AppCompatActivity() {
         private const val HOURMAX = 12
     }
     private var snackNum = 0
+    private var toggleButtonFirst = 0
+    private var toggleButtonSecond = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_assingn_buy)
+        setContentView(R.layout.activity_assign_buy)
     }
 
     override fun onStart() {
         super.onStart()
         initEditText()
         initBtn()
+        initToggleBtn()
     }
 
     private fun initEditText(){
@@ -65,14 +66,35 @@ class AssingnBuyActivity : AppCompatActivity() {
         }
     }
 
-    private fun hourEditListener(editText : EditText) : View.OnFocusChangeListener {
+    private fun initHourEdit(){
+        findViewById<EditText>(R.id.arrivalHour).let{
+            it.setOnEditorActionListener(hourEditListener(it))
+        }
+
+        findViewById<EditText>(R.id.endHour).let{
+            it.setOnEditorActionListener(hourEditListener(it))
+        }
+    }
+
+    private fun initMinuteEdit(){
+        findViewById<EditText>(R.id.arrivalMinute)?.let{
+            it.setOnEditorActionListener(minuteEditListener(it))
+        }
+        findViewById<EditText>(R.id.endMinute)?.let{
+            it.setOnEditorActionListener(minuteEditListener(it))
+        }
+    }
+
+    private fun hourEditListener(editText : EditText) : TextView.OnEditorActionListener {
         Log.d("dddattta", "hour")
-        return View.OnFocusChangeListener { _, hasFocus ->
-            if(!hasFocus) {
-                 val hour = Integer.parseInt(editText.text.toString().toString())
-                if(hour > HOURMAX)
+        return TextView.OnEditorActionListener { num, id, event  ->
+            num.text?.let{
+                val minute = Integer.parseInt(it.toString())
+                if(minute > HOURMAX) {
                     editText.text = Editable.Factory.getInstance().newEditable(HOURMAX.toString())
+                }
             }
+            return@OnEditorActionListener false
         }
     }
 
@@ -89,89 +111,35 @@ class AssingnBuyActivity : AppCompatActivity() {
         }
     }
 
-    private fun initHourEdit(){
-        val etArriveHour = findViewById<EditText>(R.id.arrivalHour)
-        findViewById<EditText>(R.id.arrivalHour).let{
-            it.onFocusChangeListener = hourEditListener(it)
+    private fun initToggleBtn(){
+        val arriveAM = findViewById<ToggleButton>(R.id.arriveAM)
+        val arrivePM = findViewById<ToggleButton>(R.id.arrivePM)
+        val endAM = findViewById<ToggleButton>(R.id.endAM)
+        val endPM = findViewById<ToggleButton>(R.id.endPM)
+        arriveAM?.let{
+            it.setOnCheckedChangeListener { compoundButton, b ->
+                toggleBtn(arrivePM, b)
+            }
         }
-
-        findViewById<EditText>(R.id.endHour).let{
-            it.onFocusChangeListener = hourEditListener(it)
+        arrivePM?.let{
+            it.setOnCheckedChangeListener { compoundButton, b ->
+                toggleBtn(arriveAM, b)
+            }
+        }
+        endAM?.let{
+            it.setOnCheckedChangeListener { compoundButton, b ->
+                toggleBtn(endPM, b)
+            }
+        }
+        endPM?.let{
+            it.setOnCheckedChangeListener { compoundButton, b ->
+                toggleBtn(endAM, b)
+            }
         }
     }
 
-    private fun initMinuteEdit(){
-        findViewById<EditText>(R.id.arrivalMinute)?.let{
-            it.setOnEditorActionListener(minuteEditListener(it))
-        }
-        findViewById<EditText>(R.id.endMinute)?.let{
-            it.setOnEditorActionListener(minuteEditListener(it))
-        }
+    private fun toggleBtn(BtnOther: ToggleButton, isChecked : Boolean) {
+        BtnOther.isChecked = !isChecked
     }
 
-//    private fun detectNumHour2(){
-//        val editText = findViewById<EditText>(R.id.end_hour)
-//        editText.addTextChangedListener(object : TextWatcher{
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//                Log.d("data","before")
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                Log.d("data","ing")
-//            }
-//
-//            override fun afterTextChanged(s: Editable?) {
-//                s?.let{
-//                    num1 = Integer.parseInt(it.toString())
-//                    if(num1 > 12) {
-//                        editText.text = Editable.Factory.getInstance().newEditable(hourMax.toString())
-//                    }
-//                }
-//            }
-//        })
-//    }
-//
-//    private fun detectNumMinute1(){
-//        val editText = findViewById<EditText>(R.id.arrival_minute)
-//        editText.addTextChangedListener(object : TextWatcher{
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//                Log.d("data","before")
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                Log.d("data","ing")
-//            }
-//
-//            override fun afterTextChanged(s: Editable?) {
-//                s?.let{
-//                    num2 = Integer.parseInt(it.toString())
-//                    if(num2 > 59) {
-//                        editText.text = Editable.Factory.getInstance().newEditable(minuteMax.toString())
-//                    }
-//                }
-//            }
-//        })
-//    }
-//
-//    private fun detectNumMinute2(){
-//        val editText = findViewById<EditText>(R.id.end_minute)
-//        editText.addTextChangedListener(object : TextWatcher{
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//                Log.d("data","before")
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                Log.d("data","ing")
-//            }
-//
-//            override fun afterTextChanged(s: Editable?) {
-//                s?.let{
-//                    num2 = Integer.parseInt(it.toString())
-//                    if(num2 > 59) {
-//                        editText.text = Editable.Factory.getInstance().newEditable(minuteMax.toString())
-//                    }
-//                }
-//            }
-//        })
-//    }
 }

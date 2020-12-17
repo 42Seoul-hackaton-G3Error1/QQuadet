@@ -10,7 +10,7 @@ import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
-class TimeListAdapter(val itemClick: () -> Unit) : RecyclerView.Adapter<TimeListAdapter.TimeListViewHolder>(){
+class TimeListAdapter(private val itemClick: () -> Unit) : RecyclerView.Adapter<TimeListAdapter.TimeListViewHolder>(){
     var dataArriveTime = ArrayList<String>()
     var dataCountQQ = ArrayList<String>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TimeListViewHolder{
@@ -18,12 +18,8 @@ class TimeListAdapter(val itemClick: () -> Unit) : RecyclerView.Adapter<TimeList
         return TimeListViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: TimeListViewHolder, position: Int) {
-
-        holder.arriveTime.text = dataArriveTime[position]
-        holder.countQq.text = dataCountQQ[position]
-        holder.sinChung.setOnClickListener{itemClick}
-    }
+    override fun onBindViewHolder(holder: TimeListViewHolder, position: Int) =
+        holder.bind(dataArriveTime[position], dataCountQQ[position], itemClick)
 
     override fun getItemCount(): Int {
         return dataArriveTime.size
@@ -35,9 +31,14 @@ class TimeListAdapter(val itemClick: () -> Unit) : RecyclerView.Adapter<TimeList
     }
 
     class TimeListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val arriveTime = itemView.findViewById<TextView>(R.id.tvArriveTime)
-        val countQq = itemView.findViewById<TextView>(R.id.tvCountQQ)
-        val sinChung = itemView.findViewById<Button>(R.id.btnSinChung)
+        private val arriveTime = itemView.findViewById<TextView>(R.id.tvArriveTime)
+        private val countQq = itemView.findViewById<TextView>(R.id.tvCountQQ)
+        private val sinChung = itemView.findViewById<Button>(R.id.btnSinChung)
+        fun bind(arrive : String, count : String, itemClick: () -> Unit){
+            arriveTime.text = arrive
+            countQq.text = count
+            sinChung.setOnClickListener { itemClick() }
+        }
     }
 
 }
