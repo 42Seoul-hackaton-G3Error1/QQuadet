@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun moveToBuyPage(){
-        val intent = Intent(this, AssignBuyActivity::class.java)
+        val intent = Intent(this, AssingnBuyActivity::class.java)
         findViewById<TextView>(R.id.mainBuy).setOnClickListener{
             startActivity(intent)
         }

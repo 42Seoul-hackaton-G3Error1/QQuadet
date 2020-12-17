@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AssignEatActivity"></activity>
-        <activity android:name=".AssignBuyActivity"></activity>
+        <activity android:name=".AssingnBuyActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -7,7 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 
-class AssignBuyActivity : AppCompatActivity() {
+class AssingnBuyActivity : AppCompatActivity() {
     private var num1 = 0
     private var num2 = 0
     override fun onCreate(savedInstanceState: Bundle?) {
