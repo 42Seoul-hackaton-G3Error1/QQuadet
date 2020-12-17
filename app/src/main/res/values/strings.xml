@@ -10,4 +10,8 @@
     <string name="minute">Minute</string>
     <string name="endTime">신청마감시간</string>
     <string name="qquanum">꽈배기 갯수</string>
+    <string name="sugar">SUGAR</string>
+    <string name="noSugar">NO SUGAR</string>
+    <string name="qquaBaek">꽈백</string>
+    <string name="total">TOTAL</string>
 </resources>
