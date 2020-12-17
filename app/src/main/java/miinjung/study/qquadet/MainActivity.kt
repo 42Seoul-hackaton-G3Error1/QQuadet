@@ -11,10 +11,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         moveToBuyPage()
+        moveToEatPage()
     }
 
     private fun moveToBuyPage(){
         val intent = Intent(this, AssingnBuyActivity::class.java)
+        findViewById<TextView>(R.id.mainBuy).setOnClickListener{
+            startActivity(intent)
+        }
+    }
+
+    private fun moveToEatPage(){
+        val intent = Intent(this, AssignEatActivity::class.java)
         findViewById<TextView>(R.id.mainBuy).setOnClickListener{
             startActivity(intent)
         }
