@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="도착시간"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="125dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="39dp">
+
+        <TextView
+            android:id="@+id/tvArriveHour"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:textSize="60sp"
+            android:textColor="@color/orange"
+            android:textStyle="normal"
+            android:gravity="center_horizontal"
+            android:text="07"
+            android:layout_marginStart="48dp"/>
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="70dp"
+            android:textSize="60sp"
+            android:textColor="@color/orange"
+            android:textStyle="normal"
+            android:gravity="center_horizontal"
+            android:text=":"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/tvArriveMin"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:textSize="60sp"
+            android:textColor="@color/orange"
+            android:textStyle="normal"
+            android:gravity="center_horizontal"
+            android:text="00"
+            android:layout_marginEnd="21dp"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:textSize="14sp"
+            android:textColor="@color/orange"
+            android:textStyle="normal"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="10sp"
+            android:gravity="center_horizontal"
+            android:text="AM"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="SUGAR"
+        android:layout_marginStart="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="64dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:textSize="60sp"
+            android:textColor="@color/orange"
+            android:textStyle="normal"
+            android:gravity="center_horizontal"
+            android:text="11"
+            android:layout_marginStart="18dp"/>
+
+            <TextView
+                android:id="@+id/tvSugar"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:textSize="30sp"
+                android:textColor="@color/orange"
+                android:textStyle="normal"
+                android:text="꽈백"
+                android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="NO SUGAR"
+        android:layout_marginStart="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:textSize="60sp"
+            android:textColor="@color/orange"
+            android:textStyle="normal"
+            android:gravity="center_horizontal"
+            android:text="2"
+            android:layout_marginStart="18dp"/>
+
+        <TextView
+            android:id="@+id/tvNoSugar"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:textSize="30sp"
+            android:textColor="@color/orange"
+            android:textStyle="normal"
+            android:text="꽈백"
+            android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/qquadet_logo"
+        android:contentDescription="@string/mainLogo"/>
+
+
+</LinearLayout>
