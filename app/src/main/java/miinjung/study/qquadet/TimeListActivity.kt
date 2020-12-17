@@ -19,13 +19,13 @@ class TimeListActivity : AppCompatActivity() {
 
     private fun initRecyclerView(){
         val recyclerView = findViewById<RecyclerView>(R.id.rvTimeList)
-        val adapter = TimeListAdapter(this){SearchData ->
-            val intent = Intent(this, AssignEatActivity::class.java)
-            startActivity(intent)
-        }
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter.setItem(dataList1, dataList2)
-        adapter.notifyDataSetChanged()
+//        val adapter = TimeListAdapter(this){SearchData ->
+//            val intent = Intent(this, AssignEatActivity::class.java)
+//            startActivity(intent)
+//        }
+//        recyclerView.adapter = adapter
+//        recyclerView.layoutManager = LinearLayoutManager(this)
+//        adapter.setItem(dataList1, dataList2)
+//        adapter.notifyDataSetChanged()
     }
 }

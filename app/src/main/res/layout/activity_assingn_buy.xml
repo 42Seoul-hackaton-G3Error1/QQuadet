@@ -33,6 +33,7 @@
             android:hint="07"
             android:textColor="#FFA451"
             android:background="@drawable/custom_button3"
+            android:imeOptions="actionDone"
             />
 
         <TextView

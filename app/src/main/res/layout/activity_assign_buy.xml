@@ -26,7 +26,7 @@
         >
 
         <TextView
-            android:id="@+id/arrival_hour"
+            android:id="@+id/arrivalHour"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -48,7 +48,7 @@
             />
 
         <TextView
-            android:id="@+id/arrival_minute"
+            android:id="@+id/arrivalMinute"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -142,7 +142,7 @@
         >
 
         <TextView
-            android:id="@+id/end_hour"
+            android:id="@+id/endHour"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -164,7 +164,7 @@
             />
 
         <TextView
-            android:id="@+id/end_minute"
+            android:id="@+id/endMinute"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
