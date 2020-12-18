@@ -10,16 +10,16 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.ToggleButton
 import kotlinx.android.synthetic.main.activity_assign_buy.*
+import miinjung.study.qquadet.util.backPress
+import miinjung.study.qquadet.util.keyCollection
 
-
-class AssingnBuyActivity : AppCompatActivity() {
+class AssignBuyActivity : AppCompatActivity() {
     companion object key {
         private const val MINUTEMAX = 59
         private const val HOURMAX = 12
     }
     private var snackNum = 0
-    private var toggleButtonFirst = 0
-    private var toggleButtonSecond = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_assign_buy)
@@ -27,6 +27,7 @@ class AssingnBuyActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        backPress().clickBackPress(findViewById(R.id.btn_toolbar_buy_back),this)
         initEditText()
         initBtn()
         initToggleBtn()
@@ -60,8 +61,9 @@ class AssingnBuyActivity : AppCompatActivity() {
     }
 
     private fun clickAssign(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MyPageActivity::class.java)
         findViewById<Button>(R.id.btnAssign2).setOnClickListener{
+            intent.putExtra(keyCollection.TABNUM, 1)
             startActivity(intent)
         }
     }

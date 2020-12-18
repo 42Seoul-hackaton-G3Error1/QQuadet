@@ -13,4 +13,12 @@
     <string name="sugar">SUGAR</string>
     <string name="nosugar">NO SUGAR</string>
     <string name="assign">신청</string>
+    <string name="qquaBaek">꽈백</string>
+    <string name="total">TOTAL</string>
+    <string name="eatQb">꽈배기 먹장 ^_^</string>
+    <string name="assignEat">먹을래 신청 페이지</string>
+    <string name="assignBuy">사올래 신청 페이지</string>
+    <string name="mypage">마이페이지</string>
+    <string name="eat">먹을래</string>래
+    <string name="buy">사올래</string>
 </resources>

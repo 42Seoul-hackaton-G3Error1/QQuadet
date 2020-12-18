@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import miinjung.study.qquadet.util.backPress
+import miinjung.study.qquadet.util.keyCollection
 
 class AssignEatActivity : AppCompatActivity() {
     private var sugarNum = 0
@@ -12,6 +14,7 @@ class AssignEatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_assign_eat)
+        backPress().clickBackPress(findViewById(R.id.btn_toolbar_eat_back),this)
         clickFirstBtnM()
         clickFirstBtnP()
         clickSecondBtnM()
@@ -52,10 +55,11 @@ class AssignEatActivity : AppCompatActivity() {
     }
 
     private fun clickAssign(){
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this,MyPageActivity::class.java)
         findViewById<Button>(R.id.btnAssign).setOnClickListener() {
             intent.putExtra("sugarNum",sugarNum)
             intent.putExtra("noSugarNum",noSugarNum)
+            intent.putExtra(keyCollection.TABNUM, 0)
             startActivity(intent)
         }
     }

@@ -7,14 +7,18 @@
     android:orientation="vertical"
     tools:context=".AssignEatActivity">
 
+    <include
+        android:id="@+id/tbAssignEat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_assign_eat"/>
+
     <TextView
         android:layout_width="119dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="113dp"
-        android:layout_marginStart="119dp"
-        android:layout_marginEnd="121dp"
+        android:layout_marginTop="111dp"
         android:text="@string/sugar"
         android:textSize="30sp"
         android:textColor="@color/black"/>
