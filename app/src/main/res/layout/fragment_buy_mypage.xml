@@ -155,8 +155,8 @@
             android:gravity="bottom"/>
     </LinearLayout>
     <ImageView
-        android:layout_width="76dp"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="end"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="80dp"
