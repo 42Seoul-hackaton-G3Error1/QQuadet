@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".TimeListActivity">
 
+    <include
+        android:id="@+id/tbTimeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_assign_eat"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTimeList"
         android:layout_width="match_parent"

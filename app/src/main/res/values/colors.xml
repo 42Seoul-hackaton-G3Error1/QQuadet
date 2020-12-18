@@ -7,4 +7,7 @@
     <color name="orange">#FFA451</color>
     <color name="yellow">#FFC451</color>
     <color name="black">#000000</color>
+    <color name="brown_grey">#a0a0a0</color>
+    <color name="pale_orange">#ffa451</color>
+    <color name="pale_orange_12">#1effa451</color>
 </resources>

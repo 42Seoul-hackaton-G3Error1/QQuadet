@@ -1,4 +1,7 @@
 package miinjung.study.qquadet
 
-class MypageMainFragment {
+import androidx.fragment.app.Fragment
+
+class MypageMainFragment : Fragment() {
+    
 }

@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="꽈배기 먹장 >.<"
+        android:text="@string/eatQb"
         android:textSize="40sp"
         android:textColor="@color/black"
         android:textStyle="bold"

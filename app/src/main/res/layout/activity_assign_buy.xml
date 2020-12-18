@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:bind="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <include
+        android:id="@+id/tbAssignBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_assign_buy"/>
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="25dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginRight="135dp"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
         android:text="@string/arriveTime"
         />
 
@@ -25,16 +28,18 @@
         android:layout_gravity="center"
         >
 
-        <TextView
-            android:id="@+id/arrival_hour"
+        <EditText
+            android:id="@+id/arrivalHour"
+            android:inputType="number"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="60dp"
             android:layout_marginLeft="60dp"
-            android:text="00"
+            android:hint="00"
             android:textColor="#FFA451"
             android:background="@drawable/custom_button3"
+            android:imeOptions="actionDone"
             />
 
         <TextView
@@ -47,28 +52,28 @@
             android:textColor="#FFA451"
             />
 
-        <TextView
-            android:id="@+id/arrival_minute"
+        <EditText
+            android:id="@+id/arrivalMinute"
+            android:inputType="number"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="60dp"
             android:layout_marginLeft="20dp"
-            android:text="00"
+            android:hint="00"
             android:textColor="#FFA451"
             android:background="@drawable/custom_button3"
             />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_marginLeft="18dp"
-            android:layout_marginRight="40dp"
             >
 
-            <TextView
+            <ToggleButton
                 android:id="@+id/arriveAM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,22 +81,28 @@
                 android:layout_gravity="center"
                 android:textSize="14sp"
                 android:gravity="center"
-                android:text="@string/am"
-                android:background="@drawable/custom_button1"
+                android:layout_weight="1"
+                android:textOn="@string/am"
+                android:textOff="@string/am"
+                android:checked="true"
+                android:background="@drawable/btn_time_selector"
+                android:textColor="@color/btn_time_on"
                 />
 
-            <TextView
+            <ToggleButton
                 android:id="@+id/arrivePM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_weight="1"
                 android:layout_marginTop="4dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="@string/pm"
-                android:background="@drawable/custom_button1"
+                android:textOn="@string/pm"
+                android:textOff="@string/pm"
+                android:background="@drawable/btn_time_selector"
+                android:textColor="@color/btn_time_on"
                 />
-
         </LinearLayout>
     </LinearLayout>
 
@@ -124,13 +135,12 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
         android:textSize="25sp"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginRight="135dp"
+        android:layout_marginTop="49dp"
         android:text="@string/endTime"
         />
 
@@ -141,14 +151,15 @@
         android:layout_gravity="center"
         >
 
-        <TextView
-            android:id="@+id/end_hour"
+        <EditText
+            android:id="@+id/endHour"
+            android:inputType="number"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="60sp"
             android:layout_marginLeft="60dp"
-            android:text="00"
+            android:hint="00"
             android:textColor="#FFA451"
             android:background="@drawable/custom_button3"
             />
@@ -163,28 +174,27 @@
             android:textColor="#FFA451"
             />
 
-        <TextView
-            android:id="@+id/end_minute"
+        <EditText
+            android:id="@+id/endMinute"
+            android:inputType="number"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="60sp"
             android:layout_marginLeft="20dp"
-            android:text="00"
+            android:hint="00"
             android:textColor="#FFA451"
-            android:background="@drawable/custom_button3"
-            />
+            android:background="@drawable/custom_button3" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_marginLeft="18dp"
-            android:layout_marginRight="40dp"
             >
 
-            <TextView
+            <ToggleButton
                 android:id="@+id/endAM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -192,11 +202,15 @@
                 android:layout_gravity="center"
                 android:textSize="14sp"
                 android:gravity="center"
-                android:text="@string/am"
-                android:background="@drawable/custom_button1"
+                android:layout_weight="1"
+                android:textOn="@string/am"
+                android:textOff="@string/am"
+                android:checked="true"
+                android:background="@drawable/btn_time_selector"
+                android:textColor="@color/btn_time_on"
                 />
 
-            <TextView
+            <ToggleButton
                 android:id="@+id/endPM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -204,8 +218,11 @@
                 android:layout_marginTop="4dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="@string/pm"
-                android:background="@drawable/custom_button1"
+                android:layout_weight="1"
+                android:textOn="@string/pm"
+                android:textOff="@string/pm"
+                android:background="@drawable/btn_time_selector"
+                android:textColor="@color/btn_time_on"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -238,13 +255,11 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="25sp"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginRight="135dp"
+        android:layout_marginTop="29dp"
         android:text="@string/qquanum"
         />
 
@@ -290,9 +305,9 @@
 
     <Button
         android:id="@+id/btnAssign2"
-        android:layout_width="300dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="55dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@drawable/up_down_btn"
