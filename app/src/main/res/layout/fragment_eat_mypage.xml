@@ -29,7 +29,7 @@
             android:textColor="@color/orange"
             android:textStyle="normal"
             android:gravity="center_horizontal"
-            android:text="07"
+            android:text="01"
             android:layout_marginStart="48dp"/>
 
         <TextView
@@ -51,7 +51,7 @@
             android:textColor="@color/orange"
             android:textStyle="normal"
             android:gravity="center_horizontal"
-            android:text="00"
+            android:text="30"
             android:layout_marginEnd="21dp"/>
 
         <TextView
@@ -64,7 +64,7 @@
             android:letterSpacing="0.01"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal"
-            android:text="AM"/>
+            android:text="@string/pm"/>
 
     </LinearLayout>
 
@@ -90,7 +90,7 @@
             android:textColor="@color/orange"
             android:textStyle="normal"
             android:gravity="center_horizontal"
-            android:text="11"
+            android:text="1"
             android:layout_marginStart="18dp"/>
 
             <TextView

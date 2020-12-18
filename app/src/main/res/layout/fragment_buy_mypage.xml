@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="07"
+            android:text="01"
             android:textSize="60sp"
             android:textColor="@color/orange"
             android:gravity="center"/>
@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="00"
+            android:text="30"
             android:textSize="60sp"
             android:textColor="@color/orange"
             android:layout_marginStart="12dp"
@@ -51,7 +51,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/am"
+            android:text="@string/pm"
             android:textSize="14sp"
             android:textColor="@color/orange"
             android:layout_marginStart="21dp"
@@ -93,7 +93,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="2"
+            android:text="1"
             android:textSize="60sp"
             android:textColor="@color/orange"/>
 
@@ -142,7 +142,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="4"
+            android:text="3"
             android:textSize="60sp"
             android:textColor="@color/orange"/>
 
